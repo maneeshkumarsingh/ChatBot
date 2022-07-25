@@ -1,0 +1,121 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hey :-)",
+        "Hello, thanks for visiting",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?"
+      ]
+    },
+    
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+    {
+      "tag":"devices1",
+      "patterns":["list of devices with manufautre as ABC"],
+      "responses":["select * from DEVICE_INFO where manufautre='ABC'"]
+      },
+      {
+      "tag":"devices2",
+      "patterns":["list the devices with firmware less than 2.3 version"],
+      "responses":["select * from DEVICE_INFO where FIRMWARE_VERSION<'2.3'"]
+      },
+      {
+      "tag":"devices3",
+      "patterns":["list the devices with firmware greater than 2.3 version"],
+      "responses":["select * from DEVICE_INFO where FIRMWARE_VERSION>'2.3'"]
+      },
+      {
+      "tag":"devices4",
+      "patterns":["list out the devices with status is connected"],
+      "responses":["select * from DEVICE_INFO where STATUS='Connected'"]
+      },
+      {
+      "tag":"devices5",
+      "patterns":["get me the list of devices with status is idle"],
+      "responses":["select * from DEVICE_INFO where STATUS='Idle'"]
+      },
+      {
+      "tag":"devices6","patterns":["populate devices status as new"],
+      "responses":["select * from DEVICE_INFO where STATUS='New'"]
+      },
+      {"tag":"devices7",
+      "patterns":["get me the list of devices with status is disconnected"],
+      "responses":["select * from DEVICE_INFO where STATUS='Disconnected'"]
+      },
+      {
+      "tag":"devices8",
+      "patterns":["populate devices which having IMEI 143232232"],
+      "responses":["select * from DEVICE_INFO where IMEI='143232232'"]
+      },
+      {"tag":"devices9",
+      "patterns":["populate all devices with bangalore", "get the devices are located on bangalore "],
+      "responses":["select * from DEVICE_INFO where LATITUDE like 12.9716 AND LONGITUDE like '77.5946'"]
+      },
+      {
+      "tag":"devices10",
+      "patterns":["populate all devices with Mumbai"],
+      "responses":["select * from DEVICE_INFO where LATITUDE like 19.0760 AND LONGITUDE like '72.8777'"]
+      },
+      
+      {"tag":"devices12",
+      "patterns":["show list of devices with protocol as XYZ"],
+      "responses":["select * from DEVICE_INFO where PROTOCOL='XYZ'"]
+      },
+      {"tag":"devices13",
+      "patterns":["show currently connected devices"],"responses":["select * from DEVICE_INFO where STATUS='Connected'"]
+      },
+      {
+      "tag":"devices14",
+      "patterns":["show devices with xyz and abc manifacture"],
+      "responses":["select * from DEVICE_INFO where MANUFACTURE='xyz' OR MANUFACTURE='abc'"]
+      },
+      {
+      "tag":"devices15",
+      "patterns":["show devices other than xyz manifacture"],
+      "responses":["select * from DEVICE_INFO where MANUFACTURE!='xyz'"]
+      },
+      {
+      "tag":"devices16",
+      "patterns":["show devices other than xyz protocol"],
+      "responses":["select * from DEVICE_INFO where PROTOCOL!='xyz'"]
+      },
+      {
+      "tag":"devices17",
+      "patterns":["show devices other than xyz and abcd protocol"],
+      "responses":["select * from DEVICE_INFO where PROTOCOL!='xyz' AND PROTOCOL!='abc'"]
+      },
+      {
+      "tag":"devices18",
+      "patterns":["show devices that has firmware version as 2.3 and supports xyz protocol"],
+      "responses":["select * from DEVICE_INFO where FIRMWARE_VERSION>'2.3'  AND PROTOCOL='xyz'"]
+      },
+      {
+      "tag":"devices19",
+      "patterns":["show devices which are located in bangalore and supports xyz protocol"],
+      "responses":["select * from DEVICE_INFO WHERE LATITUDE like '19.0015' AND LONGITUDE like '75.5943' AND PROTOCOL='xyz' "]
+      }
+        ]
+      }
